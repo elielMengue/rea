@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "wikipedia-fr-lecture",
+    "url": "https://fr.wikipedia.org/wiki/Lecture",
+    "fetchedAt": "2026-06-10T11:22:39.953Z",
+    "bytes": 244868
+  },
+  {
+    "slug": "wikipedia-en-reading",
+    "url": "https://en.wikipedia.org/wiki/Reading",
+    "fetchedAt": "2026-06-10T11:22:47.985Z",
+    "bytes": 1543753
+  },
+  {
+    "slug": "mdn-intersection-observer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+    "fetchedAt": "2026-06-10T11:22:50.561Z",
+    "bytes": 199892
+  },
+  {
+    "slug": "web-dev-cls",
+    "url": "https://web.dev/articles/cls",
+    "fetchedAt": "2026-06-10T11:22:54.729Z",
+    "bytes": 129003
+  },
+  {
+    "slug": "chrome-dev-mv3",
+    "url": "https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3",
+    "fetchedAt": "2026-06-10T11:22:59.883Z",
+    "bytes": 131874
+  },
+  {
+    "slug": "martinfowler-microservices",
+    "url": "https://martinfowler.com/articles/microservices.html",
+    "fetchedAt": "2026-06-10T11:23:03.301Z",
+    "bytes": 86102
+  },
+  {
+    "slug": "bbc-news",
+    "url": "https://www.bbc.com/news/science-environment-56837908",
+    "fetchedAt": "2026-06-10T11:23:08.509Z",
+    "bytes": 205132
+  },
+  {
+    "slug": "npr-text",
+    "url": "https://text.npr.org/",
+    "fetchedAt": "2026-06-10T11:23:11.140Z",
+    "bytes": 5913
+  },
+  {
+    "slug": "lemonde-pixels",
+    "url": "https://www.lemonde.fr/pixels/",
+    "fetchedAt": "2026-06-10T11:23:15.663Z",
+    "bytes": 358344
+  },
+  {
+    "slug": "francetvinfo",
+    "url": "https://www.francetvinfo.fr/",
+    "fetchedAt": "2026-06-10T11:23:24.469Z",
+    "bytes": 1732458
+  },
+  {
+    "slug": "ars-technica",
+    "url": "https://arstechnica.com/gadgets/2024/01/what-i-learned-from-using-a-raspberry-pi-5-as-my-main-computer-for-two-weeks/",
+    "fetchedAt": "2026-06-10T11:23:29.462Z",
+    "bytes": 187747
+  },
+  {
+    "slug": "effective-go",
+    "url": "https://go.dev/doc/effective_go",
+    "fetchedAt": "2026-06-10T11:23:32.772Z",
+    "bytes": 142713
+  },
+  {
+    "slug": "python-tutorial",
+    "url": "https://docs.python.org/3/tutorial/introduction.html",
+    "fetchedAt": "2026-06-10T11:23:36.014Z",
+    "bytes": 73085
+  },
+  {
+    "slug": "daringfireball-markdown",
+    "url": "https://daringfireball.net/projects/markdown/syntax",
+    "fetchedAt": "2026-06-10T11:23:39.042Z",
+    "bytes": 39699
+  },
+  {
+    "slug": "paulgraham-essay",
+    "url": "https://paulgraham.com/words.html",
+    "fetchedAt": "2026-06-10T11:23:42.079Z",
+    "bytes": 13715
+  },
+  {
+    "slug": "overreacted",
+    "url": "https://overreacted.io/the-two-reacts/",
+    "fetchedAt": "2026-06-10T11:23:44.403Z",
+    "bytes": 138706
+  },
+  {
+    "slug": "joelonsoftware",
+    "url": "https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/",
+    "fetchedAt": "2026-06-10T11:23:46.646Z",
+    "bytes": 54622
+  },
+  {
+    "slug": "korben-blog",
+    "url": "https://korben.info/",
+    "fetchedAt": "2026-06-10T11:23:49.999Z",
+    "bytes": 259804
+  },
+  {
+    "slug": "react-dev-learn",
+    "url": "https://react.dev/learn/thinking-in-react",
+    "fetchedAt": "2026-06-10T11:23:53.207Z",
+    "bytes": 285163
+  },
+  {
+    "slug": "nodejs-blog",
+    "url": "https://nodejs.org/en/blog/announcements/v22-release-announce",
+    "fetchedAt": "2026-06-10T11:23:55.675Z",
+    "bytes": 298556
+  }
+]

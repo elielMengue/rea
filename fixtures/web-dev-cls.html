@@ -1,0 +1,3442 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="ja-x-mtfrom-en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="web.dev">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#3740ff"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/web/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/touchicon-180.png"><link rel="canonical" href="https://web.dev/articles/cls?hl=ja"><link rel="search" type="application/opensearchdescription+xml"
+            title="web.dev" href="https://web.dev/s/opensearch.xml?hl=ja">
+      <link rel="alternate" hreflang="en"
+          href="https://web.dev/articles/cls" /><link rel="alternate" hreflang="x-default" href="https://web.dev/articles/cls" /><link rel="alternate" hreflang="ar"
+          href="https://web.dev/articles/cls?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://web.dev/articles/cls?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://web.dev/articles/cls?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://web.dev/articles/cls?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://web.dev/articles/cls?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://web.dev/articles/cls?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://web.dev/articles/cls?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://web.dev/articles/cls?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://web.dev/articles/cls?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://web.dev/articles/cls?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://web.dev/articles/cls?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://web.dev/articles/cls?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://web.dev/articles/cls?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://web.dev/articles/cls?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://web.dev/articles/cls?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://web.dev/articles/cls?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://web.dev/articles/cls?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://web.dev/articles/cls?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://web.dev/articles/cls?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://web.dev/articles/cls?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://web.developers.google.cn/articles/cls" /><link rel="alternate" hreflang="x-default" href="https://web.developers.google.cn/articles/cls" /><link rel="alternate" hreflang="ar-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=zh-tw" /><link rel="alternate" hreflang="fa-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://web.developers.google.cn/articles/cls?hl=vi" /><title>Cumulative Layout Shift（CLS） &nbsp;|&nbsp; Articles &nbsp;|&nbsp; web.dev</title>
+
+<meta property="og:title" content="Cumulative Layout Shift（CLS） &nbsp;|&nbsp; Articles &nbsp;|&nbsp; web.dev"><meta name="description" content="この投稿では、Cumulative Layout Shift（CLS）指標を紹介し、その測定方法について説明します。">
+  <meta property="og:description" content="この投稿では、Cumulative Layout Shift（CLS）指標を紹介し、その測定方法について説明します。"><meta property="og:url" content="https://web.dev/articles/cls?hl=ja"><meta property="og:locale" content="ja"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2023-04-12",
+    "headline": "Cumulative Layout Shift（CLS）"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Articles",
+      "item": "https://web.dev/articles"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cumulative Layout Shift（CLS）",
+      "item": "https://web.dev/articles/cls"
+    }]
+  }
+  </script><link rel="alternate machine-translated-from" hreflang="en"
+        href="https://web.dev/articles/cls?hl=en">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="web-theme"
+        type="article"
+        
+        appearance
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      メイン コンテンツにスキップ
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="メニューを開く">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="webDev" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/lockup.svg" class="devsite-site-logo" alt="web.dev">
+  </picture>
+  
+</a>
+
+
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="上部のタブ">
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - リソース"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: リソース"
+         
+           track-name="リソース"
+         
+       >
+    リソース
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon web-dev-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>ウェブ プラットフォーム</li>
+              
+              
+                <li class="devsite-nav-description">自分のペースでウェブ プラットフォームを学びましょう。</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/html?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/html?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ウェブ プラットフォーム"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      HTML
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/css?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/css?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ウェブ プラットフォーム"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/javascript?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/javascript?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ウェブ プラットフォーム"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      JavaScript
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon web-dev-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>ユーザー エクスペリエンス</li>
+              
+              
+                <li class="devsite-nav-description">ユーザー エクスペリエンスを向上させる方法を学びます。</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/performance?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/performance?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ユーザー エクスペリエンス"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      パフォーマンス
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/accessibility?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/accessibility?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ユーザー エクスペリエンス"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ユーザー補助
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/identity?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/identity?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ユーザー エクスペリエンス"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ID
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon web-dev-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>詳細</li>
+              
+              
+                <li class="devsite-nav-description">ウェブ開発の最新情報を把握する。</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn/html?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn/html?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      HTML を学ぶ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn/css?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn/css?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS を学ぶ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn/javascript?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn/javascript?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      JavaScript を学ぶ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn/ai?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn/ai?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AI について学ぶ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn/performance?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn/performance?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      パフォーマンスを学ぶ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn/accessibility?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn/accessibility?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ユーザー補助について
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/learn?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/learn?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="詳細"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      その他のコース
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon web-dev-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>参考情報</li>
+              
+              
+                <li class="devsite-nav-description">コンテンツ コレクションやパターンなどを探索できます。</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/explore/ai?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/explore/ai?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AI とウェブ
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/explore?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/explore?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      確認
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://pagespeed.web.dev/?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://pagespeed.web.dev/?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      PageSpeed Insights
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/patterns?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/patterns?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      パターン
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/shows?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/shows?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ポッドキャストや番組
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/newsletter?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/newsletter?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      デベロッパー向けニュースレター
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/about?hl=ja"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/about?hl=ja"
+                     track-metadata-position="nav - リソース"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="参考情報"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev について
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://web.dev/discover?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://web.dev/discover?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - discover"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Discover"
+         
+           track-name="discover"
+         
+       >
+    Discover
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://web.dev/baseline?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://web.dev/baseline?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - ベースライン"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ベースライン"
+         
+           track-name="ベースライン"
+         
+       >
+    ベースライン
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://web.dev/how-to-use-baseline?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://web.dev/how-to-use-baseline?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - baseline の使用方法"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Baseline の使用方法"
+         
+           track-name="baseline の使用方法"
+         
+       >
+    Baseline の使用方法
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://web.dev/blog?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://web.dev/blog?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - ブログ"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ブログ"
+         
+           track-name="ブログ"
+         
+       >
+    ブログ
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://web.dev/case-studies?hl=ja"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://web.dev/case-studies?hl=ja"
+    
+       track-type="nav"
+       track-metadata-position="nav - 事例紹介"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 事例紹介"
+         
+           track-name="事例紹介"
+         
+       >
+    事例紹介
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Articles"
+    tenant-name="web.dev"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://web.dev/s/results?hl=ja" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="検索を開始"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="検索"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="検索"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="検索を閉じる"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          <devsite-appearance-selector></devsite-appearance-selector>
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>ログイン</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://web.dev/articles?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Articles"
+      
+    >
+    
+          Articles
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars hidden>
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="フィルタ"
+         
+         aria-label="フィルタ テキストを入力"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="フィルタをクリア"
+        aria-label="フィルタをクリア"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="サイドメニュー">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="ナビゲーションを閉じる">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="webDev" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/lockup.svg" class="devsite-site-logo" alt="web.dev">
+  </picture>
+  
+</a>
+
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: リソース"
+      
+        track-name="リソース"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      リソース
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: リソース"
+      
+        track-name="リソース"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="リソース">
+      その他
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="リソース">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/discover"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Discover"
+      
+        track-name="discover"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Discover"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Discover
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ベースライン"
+      
+        track-name="ベースライン"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ベースライン"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ベースライン
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/how-to-use-baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Baseline の使用方法"
+      
+        track-name="baseline の使用方法"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline の使用方法"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline の使用方法
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ブログ"
+      
+        track-name="ブログ"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ブログ"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ブログ
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: 事例紹介"
+      
+        track-name="事例紹介"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 事例紹介"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      事例紹介
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="リソース"
+          aria-label="サイドメニュー" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      ウェブ プラットフォーム
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: HTML"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      HTML
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/css"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/javascript"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: JavaScript"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      JavaScript
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      ユーザー エクスペリエンス
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: パフォーマンス"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      パフォーマンス
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ユーザー補助"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ユーザー補助
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ID"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ID
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      詳細
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn/html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: HTML を学ぶ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      HTML を学ぶ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn/css"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS を学ぶ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS を学ぶ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn/javascript"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: JavaScript を学ぶ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      JavaScript を学ぶ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI について学ぶ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AI について学ぶ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: パフォーマンスを学ぶ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      パフォーマンスを学ぶ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ユーザー補助について"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ユーザー補助について
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/learn"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: その他のコース"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      その他のコース
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      参考情報
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/explore/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI とウェブ"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AI とウェブ
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/explore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 確認"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      確認
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://pagespeed.web.dev/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: PageSpeed Insights"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      PageSpeed Insights
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/patterns"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: パターン"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      パターン
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/shows"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ポッドキャストや番組"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ポッドキャストや番組
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/newsletter"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: デベロッパー向けニュースレター"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      デベロッパー向けニュースレター
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/about"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev について"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev について
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="このページの内容"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+    <div class="devsite-banner devsite-banner-translated nocontent">
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <img src="https://web.dev/_static/images/translated.svg?hl=ja"
+               class="devsite-banner-translated-image invert"
+               alt="">
+          <span class="devsite-banner-translated-text">
+            
+            Google uses AI technology to translate content into your preferred language. AI translations can contain errors.
+          </span>
+        </div>
+        <devsite-switch-to-english-button></devsite-switch-to-english-button>
+      </div>
+    </div>
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="パンくずリスト">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://web.dev/?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          ホーム
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://web.dev/articles?hl=ja"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Articles"
+      
+    >
+    
+          Articles
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Cumulative Layout Shift（CLS）<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="閉じる"
+
+      
+      close-button-text="OK">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      コレクションでコンテンツを整理
+    </span>
+    <span slot="popout-contents">
+      
+      必要に応じて、コンテンツの保存と分類を行います。
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+    
+
+
+
+
+<p><style>
+  .wd-author__links {
+    display: flex;
+  }
+  </style>
+
+</p><div class="wd-authors" translate="no">
+  
+    
+    
+      <div class="wd-author">
+        
+          <img alt="Milica Mihajlija" class="devsite-landing-row-item-icon" decoding="async" height="64" loading="lazy" src="https://web.dev/images/authors/mihajlija.jpg?hl=ja" width="64" /> 
+        
+        <div>
+          <span> 
+            Milica Mihajlija
+          </span>
+          <div class="wd-author__links">
+            
+              <a aria-label="Milica Mihajlija on X" href="https://twitter.com/bibydigital" rel="me">
+                <svg height="22" viewBox="0 0 300 271" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>X</title>
+                  <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" fill="currentColor"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Milica Mihajlija on GitHub" href="https://github.com/mihajlija" rel="me">
+                <svg height="22" viewBox="0 0 32.6 31.8" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>GitHub</title>
+                  <path clip-rule="evenodd" d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill="currentColor" fill-rule="evenodd"></path>
+                </svg></a>
+            
+            
+            
+            
+            
+            
+              <a aria-label="Milica Mihajlija's homepage" href="https://mihajlija.github.io/" rel="me">
+                <svg height="22" viewBox="0 0 30 30" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>ホームページ</title>
+                  <circle cx="14.5" cy="14.5" fill="none" r="13.5" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></circle>
+                  <ellipse cx="14.5" cy="14.5" fill="none" rx="6.1" ry="13.5" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></ellipse>
+                  <path d="M1.6 9.6h25.8M1.6 19.4h25.8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path>
+                </svg></a>
+            
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    
+      <div class="wd-author">
+        
+          <img alt="Philip Walton" class="devsite-landing-row-item-icon" decoding="async" height="64" loading="lazy" src="https://web.dev/images/authors/philipwalton.jpg?hl=ja" width="64" /> 
+        
+        <div>
+          <span> 
+            Philip Walton
+          </span>
+          <div class="wd-author__links">
+            
+              <a aria-label="Philip Walton on X" href="https://twitter.com/philwalton" rel="me">
+                <svg height="22" viewBox="0 0 300 271" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>X</title>
+                  <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" fill="currentColor"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Philip Walton on GitHub" href="https://github.com/philipwalton" rel="me">
+                <svg height="22" viewBox="0 0 32.6 31.8" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>GitHub</title>
+                  <path clip-rule="evenodd" d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill="currentColor" fill-rule="evenodd"></path>
+                </svg></a>
+            
+            
+            
+              <a aria-label="Philip Walton on LinkedIn" href="https://www.linkedin.com/in/waltonphilip" rel="me">
+                <svg height="22" viewBox="0 0 200 200" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn</title>
+                  <path d="M185.2 0H14.8C6.6 0 0 6.4 0 14.3v171.3c0 7.9 6.6 14.3 14.8 14.3h170.4c8.1 0 14.8-6.4 14.8-14.3V14.3C199.9 6.4 193.3 0 185.2 0zM60.6 167.3H30.4V77.1h30.2v90.2zM45.5 64.8h-.2c-10.1 0-16.7-6.9-16.7-15.6 0-8.8 6.7-15.6 17.1-15.6 10.3 0 16.7 6.7 16.9 15.6 0 8.6-6.5 15.6-17.1 15.6zm124 102.5h-30.2V119c0-12.1-4.4-20.4-15.3-20.4-8.4 0-13.3 5.6-15.5 11-.8 1.9-1 4.6-1 7.3v50.4H77.3s.4-81.8 0-90.3h30.2v12.8c4-6.1 11.2-14.9 27.2-14.9 19.9 0 34.8 12.9 34.8 40.6v51.8zm-62.2-77.1c0-.1.1-.2.2-.3v.3h-.2z" fill="currentColor"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Philip Walton on Mastodon" href="https://toot.cafe/@philipwalton" rel="me">
+                <svg height="22" viewBox="0 0 16 16" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>Mastodon</title>
+                  <path d="M 15.659 9.592 C 15.424 10.72 13.553 11.956 11.404 12.195 C 10.283 12.32 9.18 12.434 8.003 12.384 C 6.079 12.302 4.56 11.956 4.56 11.956 C 4.56 12.13 4.572 12.297 4.595 12.452 C 4.845 14.224 6.478 14.33 8.025 14.379 C 9.586 14.429 10.976 14.02 10.976 14.02 L 11.04 15.337 C 11.04 15.337 9.948 15.884 8.003 15.984 C 6.93 16.039 5.598 15.959 4.047 15.576 C 0.683 14.746 0.104 11.4 0.015 8.006 C -0.012 6.998 0.005 6.048 0.005 5.253 C 0.005 1.782 2.443 0.765 2.443 0.765 C 3.672 0.238 5.782 0.017 7.975 0 L 8.029 0 C 10.221 0.017 12.332 0.238 13.561 0.765 C 13.561 0.765 15.999 1.782 15.999 5.253 C 15.999 5.253 16.03 7.814 15.659 9.592 Z M 13.124 5.522 L 13.124 9.725 L 11.339 9.725 L 11.339 5.646 C 11.339 4.786 10.951 4.35 10.175 4.35 C 9.317 4.35 8.887 4.867 8.887 5.891 L 8.887 8.124 L 7.113 8.124 L 7.113 5.891 C 7.113 4.867 6.683 4.35 5.825 4.35 C 5.049 4.35 4.661 4.786 4.661 5.646 L 4.661 9.725 L 2.876 9.725 L 2.876 5.522 C 2.876 4.663 3.111 3.981 3.582 3.476 C 4.067 2.971 4.703 2.712 5.493 2.712 C 6.406 2.712 7.098 3.039 7.555 3.695 L 8 4.39 L 8.445 3.695 C 8.902 3.039 9.594 2.712 10.507 2.712 C 11.297 2.712 11.933 2.971 12.418 3.476 C 12.889 3.981 13.124 4.663 13.124 5.522 Z" fill="currentColor" style="stroke:none;stroke-miterlimit:10;fill-rule:evenodd;"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Philip Walton on Bluesky" href="https://bsky.app/profile/philipwalton.com" rel="me">
+                <svg height="22" viewBox="0 0 568 501" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>Bluesky</title>
+                  <path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            
+            
+              <a aria-label="Philip Walton's homepage" href="https://philipwalton.com/" rel="me">
+                <svg height="22" viewBox="0 0 30 30" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>ホームページ</title>
+                  <circle cx="14.5" cy="14.5" fill="none" r="13.5" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></circle>
+                  <ellipse cx="14.5" cy="14.5" fill="none" rx="6.1" ry="13.5" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></ellipse>
+                  <path d="M1.6 9.6h25.8M1.6 19.4h25.8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path>
+                </svg></a>
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div><p></p>
+
+<p>
+  
+    
+    
+    
+    
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+   
+
+    
+    
+      
+      </p><div class="wd-browser-compat" translate="no">
+        <p>Browser Support</p>
+        <ul>
+          
+  
+  
+    
+      
+        
+          
+          
+        
+      
+    
+    
+  
+
+  
+  
+  
+  
+    
+  
+  
+  
+    
+  
+
+  <li data-support="yes">
+    <img alt="Chrome: 77." src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='-10 -10 276 276'%3E%3ClinearGradient id='a' x1='145' x2='34' y1='253' y2='61' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231e8e3e'/%3E%3Cstop offset='1' stop-color='%2334a853'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='111' x2='222' y1='254' y2='62' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fcc934'/%3E%3Cstop offset='1' stop-color='%23fbbc04'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='17' x2='239' y1='80' y2='80' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d93025'/%3E%3Cstop offset='1' stop-color='%23ea4335'/%3E%3C/linearGradient%3E%3Ccircle cx='128' cy='128' r='64' fill='%23fff'/%3E%3Cpath fill='url(%23a)' d='M96 183a64 64 0 0 1-23-23L17 64a128 128 0 0 0 111 192l55-96a64 64 0 0 1-87 23Z'/%3E%3Cpath fill='url(%23b)' d='M192 128a64 64 0 0 1-9 32l-55 96A128 128 0 0 0 239 64H128a64 64 0 0 1 64 64Z'/%3E%3Ccircle cx='128' cy='128' r='52' fill='%231a73e8'/%3E%3Cpath fill='url(%23c)' d='M96 73a64 64 0 0 1 32-9h111a128 128 0 0 0-222 0l56 96a64 64 0 0 1 23-87Z'/%3E%3C/svg%3E" />
+    <span aria-hidden="true">
+      
+        77
+      
+    </span>
+  </li>
+  
+  
+          
+  
+  
+    
+      
+        
+          
+          
+        
+      
+    
+    
+  
+
+  
+  
+  
+  
+    
+  
+  
+  
+    
+  
+
+  <li data-support="yes">
+    <img alt="Edge: 79."      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 27600 27600'%3E%3ClinearGradient id='A' gradientUnits='userSpaceOnUse'/%3E%3ClinearGradient id='B' x1='6870' x2='24704' y1='18705' y2='18705' xlink:href='%23A'%3E%3Cstop offset='0' stop-color='%230c59a4'/%3E%3Cstop offset='1' stop-color='%23114a8b'/%3E%3C/linearGradient%3E%3ClinearGradient id='C' x1='16272' x2='5133' y1='10968' y2='23102' xlink:href='%23A'%3E%3Cstop offset='0' stop-color='%231b9de2'/%3E%3Cstop offset='.16' stop-color='%231595df'/%3E%3Cstop offset='.67' stop-color='%230680d7'/%3E%3Cstop offset='1' stop-color='%230078d4'/%3E%3C/linearGradient%3E%3CradialGradient id='D' cx='16720' cy='18747' r='9538' xlink:href='%23A'%3E%3Cstop offset='.72' stop-opacity='0'/%3E%3Cstop offset='.95' stop-opacity='.53'/%3E%3Cstop offset='1'/%3E%3C/radialGradient%3E%3CradialGradient id='E' cx='7130' cy='19866' r='14324' gradientTransform='matrix(.14843 -.98892 .79688 .1196 -8759 25542)' xlink:href='%23A'%3E%3Cstop offset='.76' stop-opacity='0'/%3E%3Cstop offset='.95' stop-opacity='.5'/%3E%3Cstop offset='1'/%3E%3C/radialGradient%3E%3CradialGradient id='F' cx='2523' cy='4680' r='20243' gradientTransform='matrix(-.03715 .99931 -2.12836 -.07913 13579 3530)' xlink:href='%23A'%3E%3Cstop offset='0' stop-color='%2335c1f1'/%3E%3Cstop offset='.11' stop-color='%2334c1ed'/%3E%3Cstop offset='.23' stop-color='%232fc2df'/%3E%3Cstop offset='.31' stop-color='%232bc3d2'/%3E%3Cstop offset='.67' stop-color='%2336c752'/%3E%3C/radialGradient%3E%3CradialGradient id='G' cx='24247' cy='7758' r='9734' gradientTransform='matrix(.28109 .95968 -.78353 .22949 24510 -16292)' xlink:href='%23A'%3E%3Cstop offset='0' stop-color='%2366eb6e'/%3E%3Cstop offset='1' stop-color='%2366eb6e' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cpath id='H' d='M24105 20053a9345 9345 0 01-1053 472 10202 10202 0 01-3590 646c-4732 0-8855-3255-8855-7432 0-1175 680-2193 1643-2729-4280 180-5380 4640-5380 7253 0 7387 6810 8137 8276 8137 791 0 1984-230 2704-456l130-44a12834 12834 0 006660-5282c220-350-168-757-535-565z'/%3E%3Cpath id='I' d='M11571 25141a7913 7913 0 01-2273-2137 8145 8145 0 01-1514-4740 8093 8093 0 013093-6395 8082 8082 0 011373-859c312-148 846-414 1554-404a3236 3236 0 012569 1297 3184 3184 0 01636 1866c0-21 2446-7960-8005-7960-4390 0-8004 4166-8004 7820 0 2319 538 4170 1212 5604a12833 12833 0 007684 6757 12795 12795 0 003908 610c1414 0 2774-233 4045-656a7575 7575 0 01-6278-803z'/%3E%3Cpath id='J' d='M16231 15886c-80 105-330 250-330 566 0 260 170 512 472 723 1438 1003 4149 868 4156 868a5954 5954 0 003027-839 6147 6147 0 001133-850 6180 6180 0 001910-4437c26-2242-796-3732-1133-4392-2120-4141-6694-6525-11668-6525-7011 0-12703 5635-12798 12620 47-3654 3679-6605 7996-6605 350 0 2346 34 4200 1007 1634 858 2490 1894 3086 2921 618 1067 728 2415 728 2952s-271 1333-780 1990z'/%3E%3Cuse fill='url(%23B)' xlink:href='%23H'/%3E%3Cuse fill='url(%23D)' opacity='.35' xlink:href='%23H'/%3E%3Cuse fill='url(%23C)' xlink:href='%23I'/%3E%3Cuse fill='url(%23E)' opacity='.4' xlink:href='%23I'/%3E%3Cuse fill='url(%23F)' xlink:href='%23J'/%3E%3Cuse fill='url(%23G)' xlink:href='%23J'/%3E%3C/svg%3E"/>
+    <span aria-hidden="true">
+      
+        79
+      
+    </span>
+  </li>
+  
+  
+          
+  
+  
+    
+      
+      
+    
+    
+  
+
+  
+  
+  
+  
+    
+  
+  
+  
+    
+  
+
+  <li data-support="no">
+    <img alt="Firefox: not supported." src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'%3E%3Cdefs%3E%3CradialGradient id='ff-b' cx='428.5' cy='55.1' r='501' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23ffbd4f'/%3E%3Cstop offset='.2' stop-color='%23ffac31'/%3E%3Cstop offset='.3' stop-color='%23ff9d17'/%3E%3Cstop offset='.3' stop-color='%23ff980e'/%3E%3Cstop offset='.4' stop-color='%23ff563b'/%3E%3Cstop offset='.5' stop-color='%23ff3750'/%3E%3Cstop offset='.7' stop-color='%23f5156c'/%3E%3Cstop offset='.8' stop-color='%23eb0878'/%3E%3Cstop offset='.9' stop-color='%23e50080'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-c' cx='245.4' cy='259.9' r='501' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.3' stop-color='%23960e18'/%3E%3Cstop offset='.3' stop-color='%23b11927' stop-opacity='.7'/%3E%3Cstop offset='.4' stop-color='%23db293d' stop-opacity='.3'/%3E%3Cstop offset='.5' stop-color='%23f5334b' stop-opacity='.1'/%3E%3Cstop offset='.5' stop-color='%23ff3750' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-d' cx='305.8' cy='-58.6' r='363' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23fff44f'/%3E%3Cstop offset='.3' stop-color='%23ffdc3e'/%3E%3Cstop offset='.5' stop-color='%23ff9d12'/%3E%3Cstop offset='.5' stop-color='%23ff980e'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-e' cx='190' cy='390.8' r='238.6' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.3' stop-color='%233a8ee6'/%3E%3Cstop offset='.5' stop-color='%235c79f0'/%3E%3Cstop offset='.7' stop-color='%239059ff'/%3E%3Cstop offset='1' stop-color='%23c139e6'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-f' cx='252.2' cy='201.3' r='126.5' gradientTransform='matrix(1 0 0 1 -48 31)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.2' stop-color='%239059ff' stop-opacity='0'/%3E%3Cstop offset='.3' stop-color='%238c4ff3' stop-opacity='.1'/%3E%3Cstop offset='.8' stop-color='%237716a8' stop-opacity='.5'/%3E%3Cstop offset='1' stop-color='%236e008b' stop-opacity='.6'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-g' cx='239.1' cy='34.6' r='171.6' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffe226'/%3E%3Cstop offset='.1' stop-color='%23ffdb27'/%3E%3Cstop offset='.3' stop-color='%23ffc82a'/%3E%3Cstop offset='.5' stop-color='%23ffa930'/%3E%3Cstop offset='.7' stop-color='%23ff7e37'/%3E%3Cstop offset='.8' stop-color='%23ff7139'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-h' cx='374' cy='-74.3' r='732.2' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23fff44f'/%3E%3Cstop offset='.5' stop-color='%23ff980e'/%3E%3Cstop offset='.6' stop-color='%23ff5634'/%3E%3Cstop offset='.7' stop-color='%23ff3647'/%3E%3Cstop offset='.9' stop-color='%23e31587'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-i' cx='304.6' cy='7.1' r='536.4' gradientTransform='rotate(84 303 4)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fff44f'/%3E%3Cstop offset='.1' stop-color='%23ffe847'/%3E%3Cstop offset='.2' stop-color='%23ffc830'/%3E%3Cstop offset='.3' stop-color='%23ff980e'/%3E%3Cstop offset='.4' stop-color='%23ff8b16'/%3E%3Cstop offset='.5' stop-color='%23ff672a'/%3E%3Cstop offset='.6' stop-color='%23ff3647'/%3E%3Cstop offset='.7' stop-color='%23e31587'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-j' cx='235' cy='98.1' r='457.1' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23fff44f'/%3E%3Cstop offset='.5' stop-color='%23ff980e'/%3E%3Cstop offset='.6' stop-color='%23ff5634'/%3E%3Cstop offset='.7' stop-color='%23ff3647'/%3E%3Cstop offset='.9' stop-color='%23e31587'/%3E%3C/radialGradient%3E%3CradialGradient id='ff-k' cx='355.7' cy='124.9' r='500.3' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23fff44f'/%3E%3Cstop offset='.2' stop-color='%23ffe141'/%3E%3Cstop offset='.5' stop-color='%23ffaf1e'/%3E%3Cstop offset='.6' stop-color='%23ff980e'/%3E%3C/radialGradient%3E%3ClinearGradient id='ff-a' x1='446.9' y1='76.8' x2='47.9' y2='461.8' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23fff44f'/%3E%3Cstop offset='.1' stop-color='%23ffe847'/%3E%3Cstop offset='.2' stop-color='%23ffc830'/%3E%3Cstop offset='.4' stop-color='%23ff980e'/%3E%3Cstop offset='.4' stop-color='%23ff8b16'/%3E%3Cstop offset='.5' stop-color='%23ff672a'/%3E%3Cstop offset='.5' stop-color='%23ff3647'/%3E%3Cstop offset='.7' stop-color='%23e31587'/%3E%3C/linearGradient%3E%3ClinearGradient id='ff-l' x1='442.1' y1='74.8' x2='102.6' y2='414.3' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.2' stop-color='%23fff44f' stop-opacity='.8'/%3E%3Cstop offset='.3' stop-color='%23fff44f' stop-opacity='.6'/%3E%3Cstop offset='.5' stop-color='%23fff44f' stop-opacity='.2'/%3E%3Cstop offset='.6' stop-color='%23fff44f' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M479 166c-11-25-32-52-49-60a249 249 0 0 1 25 73c-27-68-73-95-111-155a255 255 0 0 1-8-14 44 44 0 0 1-4-9 1 1 0 0 0 0-1 1 1 0 0 0-1 0c-60 35-81 101-83 134a120 120 0 0 0-66 25 71 71 0 0 0-6-5 111 111 0 0 1-1-58c-25 11-44 29-58 44-9-12-9-52-8-60l-8 4a175 175 0 0 0-24 21 210 210 0 0 0-22 26 203 203 0 0 0-32 73l-1 2-2 15a229 229 0 0 0-4 34v1a240 240 0 0 0 477 40l1-9c5-41 0-84-15-121zM202 355l3 1-3-1zm55-145zm198-31z' fill='url(%23ff-a)'/%3E%3Cpath d='M479 166c-11-25-32-52-49-60 14 26 22 53 25 72v1a207 207 0 0 1-206 279c-113-3-212-87-231-197-3-17 0-26 2-40-2 11-3 14-4 34v1a240 240 0 0 0 477 40l1-9c5-41 0-84-15-121z' fill='url(%23ff-b)'/%3E%3Cpath d='M479 166c-11-25-32-52-49-60 14 26 22 53 25 72v1a207 207 0 0 1-206 279c-113-3-212-87-231-197-3-17 0-26 2-40-2 11-3 14-4 34v1a240 240 0 0 0 477 40l1-9c5-41 0-84-15-121z' fill='url(%23ff-c)'/%3E%3Cpath d='m362 195 1 1a130 130 0 0 0-22-29C266 92 322 5 331 0c-60 35-81 101-83 134l9-1c45 0 84 25 105 62z' fill='url(%23ff-d)'/%3E%3Cpath d='M257 210c-1 6-22 26-29 26-68 0-80 41-80 41 3 35 28 64 57 79l4 2 7 3a107 107 0 0 0 31 6c120 6 143-143 57-186 22-4 45 5 58 14-21-37-60-62-105-62l-9 1a120 120 0 0 0-66 25l17 16c16 16 58 33 58 35z' fill='url(%23ff-e)'/%3E%3Cpath d='M257 210c-1 6-22 26-29 26-68 0-80 41-80 41 3 35 28 64 57 79l4 2 7 3a107 107 0 0 0 31 6c120 6 143-143 57-186 22-4 45 5 58 14-21-37-60-62-105-62l-9 1a120 120 0 0 0-66 25l17 16c16 16 58 33 58 35z' fill='url(%23ff-f)'/%3E%3Cpath d='m171 151 5 3a111 111 0 0 1-1-58c-25 11-44 29-58 44 1 0 36 0 54 11z' fill='url(%23ff-g)'/%3E%3Cpath d='M18 261a242 242 0 0 0 231 197 207 207 0 0 0 206-279c8 56-20 110-64 146-86 71-169 43-186 31l-3-1c-50-24-71-70-67-110-42 0-57-35-57-35s38-28 89-4c46 22 90 4 90 4 0-2-42-19-58-35l-17-16a71 71 0 0 0-6-5l-5-3c-18-11-52-11-54-11-9-12-9-51-8-60l-8 4a175 175 0 0 0-24 21 210 210 0 0 0-22 26 203 203 0 0 0-32 73c0 1-9 38-5 57z' fill='url(%23ff-h)'/%3E%3Cpath d='M341 167a130 130 0 0 1 22 29 46 46 0 0 1 4 3c55 50 26 121 24 126 44-36 72-90 64-146-27-68-73-95-111-155a255 255 0 0 1-8-14 44 44 0 0 1-4-9 1 1 0 0 0 0-1 1 1 0 0 0-1 0c-9 5-65 92 10 167z' fill='url(%23ff-i)'/%3E%3Cpath d='M367 199a46 46 0 0 0-4-3l-1-1c-13-9-36-18-58-15 86 44 63 193-57 187a107 107 0 0 1-31-6 131 131 0 0 1-11-5c17 12 99 39 186-31 2-5 31-76-24-126z' fill='url(%23ff-j)'/%3E%3Cpath d='M148 277s12-41 80-41c7 0 28-20 29-26s-44 18-90-4c-51-24-89 4-89 4s15 35 57 35c-4 40 16 85 67 110l3 1c-29-15-54-44-57-79z' fill='url(%23ff-k)'/%3E%3Cpath d='M479 166c-11-25-32-52-49-60a249 249 0 0 1 25 73c-27-68-73-95-111-155a255 255 0 0 1-8-14 44 44 0 0 1-4-9 1 1 0 0 0 0-1 1 1 0 0 0-1 0c-60 35-81 101-83 134l9-1c45 0 84 25 105 62-13-9-36-18-58-14 86 43 63 192-57 186a107 107 0 0 1-31-6 131 131 0 0 1-11-5l-3-1 3 1c-29-15-54-44-57-79 0 0 12-41 80-41 7 0 28-20 29-26 0-2-42-19-58-35l-17-16a71 71 0 0 0-6-5 111 111 0 0 1-1-58c-25 11-44 29-58 44-9-12-9-52-8-60l-8 4a175 175 0 0 0-24 21 210 210 0 0 0-22 26 203 203 0 0 0-32 73l-1 2-2 15a279 279 0 0 0-4 34v1a240 240 0 0 0 477 40l1-9c5-41 0-84-15-121zm-24 13z' fill='url(%23ff-l)'/%3E%3C/svg%3E" />
+    <span aria-hidden="true">
+      
+        x
+      
+    </span>
+  </li>
+  
+  
+          
+  
+  
+    
+      
+      
+    
+    
+  
+
+  
+  
+  
+  
+    
+  
+  
+  
+    
+  
+
+  <li data-support="no">
+    <img alt="Safari: not supported."      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='195 190 135 135'%3E%3Cdefs%3E%3ClinearGradient id='s-a' x1='132.6' x2='134.4' y1='111.7' y2='-105.3' xlink:href='%23s-b'%3E%3Cstop offset='0' stop-color='%23d2d2d2' /%3E%3Cstop offset='.5' stop-color='%23f2f2f2' /%3E%3Cstop offset='1' stop-color='%23fff' /%3E%3C/linearGradient%3E%3ClinearGradient id='s-b' gradientUnits='userSpaceOnUse' /%3E%3ClinearGradient id='s-c' x1='65.4' x2='67.4' y1='115.7' y2='17.1' xlink:href='%23s-b'%3E%3Cstop offset='0' stop-color='%23005ad5' /%3E%3Cstop offset='.2' stop-color='%230875f0' /%3E%3Cstop offset='.3' stop-color='%23218cee' /%3E%3Cstop offset='.6' stop-color='%2327a5f3' /%3E%3Cstop offset='.8' stop-color='%2325aaf2' /%3E%3Cstop offset='1' stop-color='%2321aaef' /%3E%3C/linearGradient%3E%3ClinearGradient id='s-d' x1='158.7' x2='176.3' y1='96.7' y2='79.5' xlink:href='%23s-b'%3E%3Cstop offset='0' stop-color='%23c72e24' /%3E%3Cstop offset='1' stop-color='%23fd3b2f' /%3E%3C/linearGradient%3E%3CradialGradient id='s-i' cx='-69.9' cy='69.3' r='54' gradientTransform='matrix(.9 -.01 .04 2.72 -9 -120)' xlink:href='%23s-b'%3E%3Cstop offset='0' stop-color='%2324a5f3' stop-opacity='0' /%3E%3Cstop offset='1' stop-color='%231e8ceb' /%3E%3C/radialGradient%3E%3CradialGradient id='s-j' cx='109.3' cy='13.8' r='93.1' gradientTransform='matrix(-.02 1.1 -1.04 -.02 137 -115)' xlink:href='%23s-b'%3E%3Cstop offset='0' stop-opacity='0' /%3E%3Cstop offset='1' stop-color='%235488d6' stop-opacity='0' /%3E%3Cstop offset='1' stop-color='%235d96eb' /%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='220' height='220' x='22' y='-107' fill='url(%23s-a)' ry='49' transform='matrix(.57 0 0 .57 187 256)' /%3E%3Cg transform='translate(194 190)'%3E%3Ccircle cx='67.8' cy='67.7' fill='url(%23s-c)' paint-order='stroke fill markers' r='54' /%3E%3Ccircle cx='-69.9' cy='69.3' fill='url(%23s-i)' transform='translate(138 -2)' r='54' /%3E%3C/g%3E%3Cellipse cx='120' cy='14.2' fill='url(%23s-j)' rx='93.1' ry='93.7' transform='matrix(.58 0 0 .58 192 250)' /%3E%3Cg transform='matrix(.58 0 0 .57 197 182)'%3E%3Cpath fill='%23cac7c8' d='M46 192h1l72-48-7-9-66 57Z' /%3E%3Cpath fill='%23fbfffc' d='M46 191v1l66-57-7-9-59 65Z' /%3E%3Cpath fill='url(%23s-d)' d='m119 144-7-9 66-57-59 66Z' /%3E%3Cpath fill='%23fb645c' d='m105 126 7 9 66-57-1-1-72 49Z' /%3E%3C/g%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-miterlimit='1' stroke-width='1.3' d='m287 278 3-2m-12-17 8-2m-8-3h4m-4-13 8 2m-8 3h4m-1-13 7 3m-4-11 7 4m-2-11 6 6m0-12 6 7m1-11 4 6m4-10 3 7m5-9 2 7m15-7-1 7m10-5-3 7m11-4-4 7m11-2-5 6m16 7-7 4m10 4-7 3m10 6-8 1m8 16-8-2m5 10-7-3m4 11-7-4m2 11-6-5m0 11-5-6m-2 11-4-7m-4 11-3-8m-6 10-1-8m-16 8 2-8m-10 5 3-7m-11 4 4-7m-11 2 5-6m-8 3 3-3m4 8 2-3m5 8 2-4m6 7 1-4m8 5v-4m8 4v-4m9 3-1-4m9 1-2-4m9 0-2-4m9-2-3-3m8-4-3-2m8-5-4-2m7-6-4-1m5-8h-4m4-8h-4m3-9-4 1m1-9-4 2m-1-9-3 2m-2-9-3 3m-4-8-2 3m-5-8-2 4m-6-6-1 3m-8-5v4m-8-4v4m-9-2 1 3m-9 0 2 3m-9 1 2 3m-9 2 3 3m-8 4 3 2m-8 5 4 2m-7 6 4 1m-4 25 4-1m-2 5 7-3m-6 7 4-2m-2 6 7-4m-13-21h8m41-41v-8m0 99v-8m49-42h-8' transform='translate(-65 8)' /%3E%3C/svg%3E"/>
+    <span aria-hidden="true">
+      
+        x
+      
+    </span>
+  </li>
+  
+  
+        </ul>
+        
+        <p><a href="https://developer.mozilla.org/docs/Web/API/LayoutShift">Source</a></p>
+        
+      </div>
+    
+    
+    
+  <p></p>
+<aside class="key-term"><strong>キーワード:</strong><span> Cumulative Layout Shift（CLS）は、安定した Core Web Vitals 指標です。ユーザーが予期しないレイアウトの変化を目にする頻度を定量化できるため、<a href="https://web.dev/articles/user-centric-performance-metrics?hl=ja#types_of_metrics">視覚的な安定性</a>を測定するためのユーザー中心の重要な指標です。CLS が低いほど、ページの<a href="https://web.dev/articles/user-centric-performance-metrics?hl=ja#defining_metrics">魅力</a>が高まります。</span></aside><p>予期しないレイアウトの変化は、テキストが突然移動して読み進めにくくなったり、間違ったリンクやボタンをクリックしたりするなど、さまざまな方法でユーザー エクスペリエンスを損なう可能性があります。場合によっては、深刻な損傷につながることもあります。</p>
+
+<figure>
+  <video controls height="510" loop="" muted="" playsinline="" poster="https://web.dev/articles/cls/web-dev-assets/layout-instability-api/layout-instability-poster.png?hl=ja" width="658">
+    <source src="https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm?hl=ja" type="video/webm; codecs=vp8" />
+    <source src="https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.mp4?hl=ja" type="video/mp4; codecs=h264" />
+  </video>
+  <figcaption class="wd-caption">
+    レイアウトが突然変化し、キャンセルしようとしていた大量注文をユーザーが確認することになります。
+  </figcaption>
+</figure>
+
+<p>ページ コンテンツが予期せず移動するのは、通常、リソースが非同期に読み込まれた場合や、既存のコンテンツの前に DOM 要素が動的にページに追加された場合に発生します。レイアウトのずれの原因としては、サイズが不明な画像や動画、初期のフォールバックよりも大きくまたは小さくレンダリングされるフォント、サイズを動的に変更するサードパーティの広告やウィジェットなどがあります。</p>
+
+<p>開発中のサイトの機能とユーザーが実際に使用するサイトの機能の違いが、この問題を悪化させます。次に例を示します。</p>
+
+<ul>
+<li>パーソナライズされたコンテンツやサードパーティ コンテンツは、開発環境と本番環境で動作が異なることがよくあります。</li>
+<li>テスト画像は、多くの場合、デベロッパーのブラウザ キャッシュにすでに保存されていますが、エンドユーザーが読み込むには時間がかかります。</li>
+<li>ローカルで実行される API 呼び出しは非常に高速であるため、開発では気付かれない遅延が本番環境では大きな遅延になる可能性があります。</li>
+</ul>
+
+<p>累積レイアウト シフト（CLS）指標は、実際のユーザーで発生する頻度を測定することで、この問題に対処するのに役立ちます。</p>
+
+<h2 data-text="CLS とは何ですか？" id="what-is-cls" tabindex="-1">CLS とは何ですか？</h2>
+
+<p>CLS は、ページのライフサイクル全体で発生した<a href="https://web.dev/articles/cls?hl=ja#expected_vs_unexpected_layout_shifts">予期しない</a>レイアウト シフトの<em>レイアウト移動スコア</em>の最大バーストを測定する指標です。</p>
+
+<p><em>レイアウト変更</em>は、表示される要素の位置がレンダリングされたフレームから次のフレームに変更されるたびに発生します。（個々の<a href="#layout_shift_score">レイアウト シフト スコア</a>の計算方法については、このガイドの後半で説明します）。</p>
+
+<p>レイアウト シフトの急増（<a href="https://web.dev/blog/evolving-cls?hl=ja#why_a_session_window"><em>セッション ウィンドウ</em></a>）とは、1 つ以上の個々のレイアウト シフトが、各シフトの間隔が 1 秒未満で、ウィンドウの合計時間が最大 5 秒以内である場合に発生します。</p>
+
+<p>最大バーストは、そのウィンドウ内のすべてのレイアウト シフトの累積スコアが最大のセッション ウィンドウです。</p>
+
+<figure>
+  <video controls height="452" loop="" muted="" playsinline="" poster="https://web.dev/articles/cls/web-dev-assets/layout-instability-api/session-window-poster.png?hl=ja" width="658">
+    <source src="https://web.dev/static/articles/cls/video/web-dev-assets/better-layout-shift-metric/session-window.webm?hl=ja" type="video/webm" />
+    <source src="https://web.dev/static/articles/cls/video/web-dev-assets/better-layout-shift-metric/session-window.mp4?hl=ja" type="video/mp4" />
+  </video>
+  <figcaption class="wd-caption">
+    セッション ウィンドウの例。青い棒は、個々のレイアウト シフトのスコアを表します。</figcaption>
+</figure>
+<aside class="caution"><strong>注意:</strong><span> 以前の CLS は、ページのライフスパン全体で発生した個々のレイアウト シフトの合計スコアを測定していました。元の実装と比較してベンチマークできるツールについては、<a href="https://web.dev/articles/cls-web-tooling?hl=ja">ウェブ ツールの累積レイアウト シフトの進化</a>をご覧ください。</span></aside><p><a id="what_is_a_good_cls_score"></a></p>
+
+<h3 data-text="良好な CLS スコアとは" id="what-is-a-good-cls-score" tabindex="-1">良好な CLS スコアとは</h3>
+
+<p>優れたユーザー エクスペリエンスを提供するには、サイトで CLS スコアを <strong>0.1</strong> 未満に収めるようにします。ほとんどのユーザーが閲覧する際に目標値が達成されるよう、モバイル デバイスとデスクトップ デバイスでページ読み込みの<strong>75 パーセンタイル</strong>を測定することをおすすめします。</p>
+
+<figure>
+  <picture>
+    <source height="200" media="(min-width: 640px)" srcset="https://web.dev/static/articles/cls/image/good-cls-values.svg?hl=ja" width="800" />
+    <img alt="良好な CLS 値は 0.1 未満、良好でない値は 0.25 より大きい値です。その間の値は改善が必要です" height="480" src="https://web.dev/static/articles/cls/image/good-cls-values-are-01-a42d66f2d0f42.svg?hl=ja" width="640" />
+  </picture>
+  <figcaption class="wd-caption">
+    良好な CLS 値は 0.1 未満です。低速の値は 0.25 より大きい値です。</figcaption>
+</figure>
+
+<p>この推奨事項の背景にある調査と方法論について詳しくは、<a href="https://web.dev/articles/defining-core-web-vitals-thresholds?hl=ja">Core Web Vitals 指標のしきい値の定義</a>をご覧ください。</p>
+
+<p><a id="layout_shifts_in_detail"></a></p>
+
+<h2 data-text="レイアウト シフトの詳細" id="layout-shifts-in-detail" tabindex="-1">レイアウト シフトの詳細</h2>
+
+<p>レイアウトのずれは <a href="https://github.com/WICG/layout-instability">Layout Instability API</a> によって定義されます。この API は、ビューポート内に表示されている要素が 2 つのフレーム間で開始位置（デフォルトの<a href="https://developer.mozilla.org/docs/Web/CSS/writing-mode">書き込みモード</a>での上と左の位置など）を変更するたびに、<code dir="ltr" translate="no">layout-shift</code> エントリを報告します。このような要素は<em>不安定な要素</em>と見なされます。</p>
+
+<p>レイアウトのずれは、既存の要素の開始位置が変更された場合にのみ発生します。新しい要素が DOM に追加された場合や、既存の要素のサイズが変更された場合、その変更によって他の表示要素の開始位置が変更されない限り、レイアウト シフトとは見なされません。</p>
+
+<p><a id="layout_shift_score"></a></p>
+
+<h3 data-text="レイアウト シフトのスコア" id="layout-shift-score" tabindex="-1">レイアウト シフトのスコア</h3>
+
+<p><em>レイアウト シフト スコア</em>を計算するために、ブラウザはビューポートのサイズと、2 つのレンダリング フレーム間のビューポート内の<em>不安定な要素</em>の移動を確認します。レイアウト シフト スコアは、その移動の 2 つの測定値（<em>インパクトの割合</em>と<em>距離の割合</em>）の積です（両方とも後述）。</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Text only"><code translate="no" dir="ltr">layout shift score = impact fraction * distance fraction
+</code></pre></devsite-code>
+<p><a id="impact_fraction"></a></p>
+
+<h3 data-text="衝撃率" id="impact-fraction" tabindex="-1">衝撃率</h3>
+
+<p><a href="https://github.com/WICG/layout-instability#Impact-Fraction">影響率</a>は、<em>不安定な要素</em>が 2 つのフレーム間のビューポート領域に与える影響を測定します。</p>
+
+<p>特定のフレームの影響率は、そのフレームと前のフレームのすべての不安定な要素の可視領域の合計を、ビューポートの合計領域の割合として表したものです。</p>
+
+<figure>
+  <img alt="不安定な要素が 1 つある場合の影響分数の例" height="600" sizes="(max-width: 840px) 100vw, 856px" src="https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76.png?hl=ja" srcset="https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_36.png?hl=ja 36w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_48.png?hl=ja 48w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_72.png?hl=ja 72w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_96.png?hl=ja 96w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_480.png?hl=ja 480w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_720.png?hl=ja 720w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_856.png?hl=ja 856w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_960.png?hl=ja 960w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_1440.png?hl=ja 1440w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_1920.png?hl=ja 1920w,https://web.dev/static/articles/cls/image/impact-fraction-example-164341c82ee76_2880.png?hl=ja 2880w" width="800" />
+  <figcaption class="wd-caption">
+    要素の位置が変更された場合、その影響率には以前の位置と現在の位置の両方が影響します。
+  </figcaption>
+</figure>
+
+<p>上の画像では、1 つのフレームでビューポートの半分を占有する要素があります。次のフレームでは、要素がビューポートの高さの 25% 下方に移動します。赤い点線の長方形は、両方のフレームにおける要素の可視領域の結合を示します。この場合、合計ビューポートの 75% であるため、<em>影響率</em>は <code dir="ltr" translate="no">0.75</code> です。</p>
+
+<p><a id="distance_fraction"></a></p>
+
+<h3 data-text="距離の分数" id="distance-fraction" tabindex="-1">距離の分数</h3>
+
+<p>レイアウト シフト スコアの式のもう一方の部分は、不安定な要素がビューポートに対して移動した距離を測定します。<em>距離の割合</em>は、フレーム内で<em>不安定な要素</em>が移動した最大の水平方向または垂直方向の距離を、ビューポートの最大の寸法（幅または高さのいずれか大きい方）で割った値です。</p>
+
+<figure>
+  <img alt="不安定な要素が 1 つある距離分数の例" height="600" sizes="(max-width: 840px) 100vw, 856px" src="https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482.png?hl=ja" srcset="https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_36.png?hl=ja 36w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_48.png?hl=ja 48w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_72.png?hl=ja 72w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_96.png?hl=ja 96w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_480.png?hl=ja 480w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_720.png?hl=ja 720w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_856.png?hl=ja 856w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_960.png?hl=ja 960w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_1440.png?hl=ja 1440w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_1920.png?hl=ja 1920w,https://web.dev/static/articles/cls/image/distance-fraction-example-9146d2a862482_2880.png?hl=ja 2880w" width="800" />
+  <figcaption class="wd-caption">
+    距離の割合は、要素がビューポート内で移動した距離を測定します。
+  </figcaption>
+</figure>
+
+<p>上の例では、ビューポートの最大ディメンションは高さで、不安定な要素がビューポートの高さの 25% 移動しているため、<em>距離の分数</em>は 0.25 になります。</p>
+
+<p>この例では、<em>影響の割合</em>が <code dir="ltr" translate="no">0.75</code>、<em>距離の割合</em>が <code dir="ltr" translate="no">0.25</code> であるため、<em>レイアウト シフト スコア</em>は <code dir="ltr" translate="no">0.75 * 0.25 = 0.1875</code> です。</p>
+<aside class="note"><strong>注:</strong><span> 当初、レイアウト シフト スコアは<em>影響率</em>のみに基づいて計算されていました。<em>距離の分数</em>は、大きな要素がわずかにシフトした場合に過度にペナルティが適用されないように導入されました。</span></aside><h3 data-text="例" id="examples" tabindex="-1">例</h3>
+
+<p>次の例は、既存の要素にコンテンツを追加するとレイアウト シフト スコアにどのように影響するかを示しています。</p>
+
+<figure>
+  <img alt="安定した要素と不安定な要素が複数あるレイアウト シフトの例" height="600" sizes="(max-width: 840px) 100vw, 856px" src="https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a.png?hl=ja" srcset="https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_36.png?hl=ja 36w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_48.png?hl=ja 48w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_72.png?hl=ja 72w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_96.png?hl=ja 96w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_480.png?hl=ja 480w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_720.png?hl=ja 720w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_856.png?hl=ja 856w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_960.png?hl=ja 960w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_1440.png?hl=ja 1440w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_1920.png?hl=ja 1920w,https://web.dev/static/articles/cls/image/layout-shift-example-mul-10d90b67b5d6a_2880.png?hl=ja 2880w" width="800" />
+  <figcaption class="wd-caption">
+    グレーのボックスの下部にボタンを追加すると、緑色のボックスが下に押し下げられ、一部がビューポートの外に出ます。
+  </figcaption>
+</figure>
+
+<p>この例では、グレーのボックスのサイズは変更されますが、開始位置は変更されないため、<em>不安定な要素</em>ではありません。</p>
+
+<p>[Click Me!] ボタンは以前 DOM に存在しなかったため、開始位置も変更されません。</p>
+
+<p>緑色のボックスの開始位置は変わりますが、ビューポートの外に一部移動されているため、<em>影響率</em>の計算では非表示領域は考慮されません。両方のフレームの緑色のボックスの可視領域の結合（赤い点線の長方形で示されています）は、最初のフレームの緑色のボックスの領域（ビューポートの 50%）と同じです。<em>影響の割合</em>は <code dir="ltr" translate="no">0.5</code> です。</p>
+
+<p><em>距離の分数</em>は紫色の矢印で示されます。緑色のボックスはビューポートの約 14% 下方に移動しているため、<em>距離の分数</em>は <code dir="ltr" translate="no">0.14</code> です。</p>
+
+<p>レイアウト シフトのスコアは <code dir="ltr" translate="no">0.5 x 0.14 = 0.07</code> です。</p>
+
+<p>次の例は、複数の不安定な要素がページのレイアウト移動スコアにどのように影響するかを示しています。</p>
+
+<figure>
+  <img alt="安定した要素と不安定な要素、ビューポートの切り抜きがあるレイアウト シフトの例" height="600" sizes="(max-width: 840px) 100vw, 856px" src="https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee.png?hl=ja" srcset="https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_36.png?hl=ja 36w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_48.png?hl=ja 48w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_72.png?hl=ja 72w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_96.png?hl=ja 96w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_480.png?hl=ja 480w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_720.png?hl=ja 720w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_856.png?hl=ja 856w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_960.png?hl=ja 960w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_1440.png?hl=ja 1440w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_1920.png?hl=ja 1920w,https://web.dev/static/articles/cls/image/layout-shift-example-sta-05cf93597fcee_2880.png?hl=ja 2880w" width="800" />
+  <figcaption>
+    この並べ替えられたリストに名前が増えると、既存の名前が移動してアルファベット順が維持されます。
+  </figcaption>
+</figure>
+
+<p>上の画像の最初のフレームには、動物の API リクエストの結果が 4 つあり、アルファベット順に並べられています。2 番目のフレームでは、並べ替えられたリストにさらに結果が追加されています。</p>
+
+<p>リストの最初の項目（「Cat」）はフレーム間で開始位置が変化しないため、安定しています。同様に、リストに追加された新しいアイテムは以前 DOM に存在しなかったため、開始位置も変更されません。一方、「犬」、「馬」、「シマウマ」のラベルが付いたアイテムは、開始位置がすべてずれているため、<em>不安定な要素</em>になっています。</p>
+
+<p>赤い点線の長方形は、これらの 3 つの<em>不安定な要素</em>の変化前後の領域の統合を表しています。この場合、ビューポートの領域の約 60% です（<em>影響率</em> <code dir="ltr" translate="no">0.60</code>）。</p>
+
+<p>矢印は、<em>不安定な要素</em>が開始位置から移動した距離を表します。青い矢印で示されている「Zebra」要素が最も移動しており、ビューポートの高さの約 30% 移動しています。この例では、<em>距離の分数</em>は <code dir="ltr" translate="no">0.3</code> になります。</p>
+
+<p>レイアウト シフトのスコアは <code dir="ltr" translate="no">0.60 x 0.3 = 0.18</code> です。</p>
+
+<p><a id="expected_unexpected_layout_shifts"></a></p>
+
+<h3 data-text="想定されるレイアウト シフトと予期しないレイアウト シフト" id="expected-unexpected-layout-shifts" tabindex="-1">想定されるレイアウト シフトと予期しないレイアウト シフト</h3>
+
+<p>レイアウトのずれはすべて悪いわけではありません。実際、多くの動的ウェブ アプリケーションでは、ページ上の要素の開始位置が頻繁に変更されます。レイアウト シフトが問題となるのは、ユーザーが予期していない場合のみです。</p>
+
+<h4 data-text="ユーザーが開始するレイアウト シフト" id="user-initiated_layout_shifts" tabindex="-1">ユーザーが開始するレイアウト シフト</h4>
+
+<p>ユーザー操作（リンクのクリックやタップ、ボタンの押下、検索ボックスへの入力など）に応じて発生するレイアウトの変化は、その操作に近いタイミングで発生し、ユーザーにその関連性が明確であれば、通常は問題ありません。</p>
+
+<p>たとえば、ユーザー操作によってトリガーされたネットワーク リクエストの完了に時間がかかる場合は、リクエストの完了時に不快なレイアウト シフトが発生しないように、すぐにスペースを作成して読み込みインジケーターを表示することをおすすめします。ユーザーが何かが読み込まれていることに気付かなかったり、リソースの準備がいつ完了するかわからない場合、ユーザーは待っている間に他の何かをクリックしようとする可能性があります。その結果、ユーザーが操作していたコンテンツが移動してしまう可能性があります。</p>
+
+<p>ユーザー入力から 500 ミリ秒以内に発生したレイアウトのずれには <a href="https://wicg.github.io/layout-instability/#dom-layoutshift-hadrecentinput"><code dir="ltr" translate="no">hadRecentInput</code></a> フラグが設定されるため、計算から除外できます。</p>
+<aside class="caution"><strong>注意:</strong><span> <code dir="ltr" translate="no">hadRecentInput</code> フラグは、タップ、クリック、キープレスなどの個別の入力イベントでのみ true になります。スクロール、ドラッグ、ピンチ、ズームなどの連続的な操作は、「最近の入力」とは見なされません。詳細については、<a href="https://github.com/WICG/layout-instability#recent-input-exclusion">レイアウトの不安定性の仕様</a>をご覧ください。</span></aside><h4 data-text="アニメーションと遷移" id="animations_and_transitions" tabindex="-1">アニメーションと遷移</h4>
+
+<p>アニメーションと遷移は、適切に使用すれば、ユーザーに驚かせることなくページ上のコンテンツを更新する優れた方法です。ページ上でコンテンツが突然予期せず移動すると、ほとんどの場合、ユーザー エクスペリエンスが低下します。一方、コンテンツが徐々に自然に移動すると、ユーザーは状況をよりよく把握し、状態の変化を把握しやすくなります。</p>
+
+<p>アニメーションによって悪影響や注意力の問題が生じる可能性があるため、サイト訪問者のブラウザ設定を尊重してください。<a href="https://web.dev/articles/prefers-reduced-motion?hl=ja"><code dir="ltr" translate="no">prefers-reduced-motion</code></a></p>
+
+<p>CSS の <a href="https://developer.mozilla.org/docs/Web/CSS/transform"><code dir="ltr" translate="no">transform</code></a> プロパティを使用すると、レイアウトのずれをトリガーせずに要素をアニメーション化できます。</p>
+
+<ul>
+<li><code dir="ltr" translate="no">height</code> プロパティと <code dir="ltr" translate="no">width</code> プロパティを変更する代わりに、<code dir="ltr" translate="no">transform: scale()</code> を使用します。</li>
+<li>要素を移動するには、<code dir="ltr" translate="no">top</code>、<code dir="ltr" translate="no">right</code>、<code dir="ltr" translate="no">bottom</code>、<code dir="ltr" translate="no">left</code> プロパティを変更せず、代わりに <code dir="ltr" translate="no">transform: translate()</code> を使用します。</li>
+</ul>
+
+<p><a id="measure_cls"></a></p>
+
+<h2 data-text="CLS を測定する方法" id="measure-cls" tabindex="-1">CLS を測定する方法</h2>
+
+<p>CLS は<a href="https://web.dev/articles/user-centric-performance-metrics?hl=ja#lab">ラボ</a>または<a href="https://web.dev/articles/user-centric-performance-metrics?hl=ja#in_the_field">フィールド</a>で測定できます。次のツールで使用できます。</p>
+<aside class="caution"><strong>注意:</strong><span> ラボツールは通常、合成環境でページを読み込むため、ページ読み込み中に発生するレイアウト シフトのみを測定できます。そのため、特定のページについてラボツールで報告される CLS 値は、実際のユーザーがフィールドで体験する値よりも低くなる可能性があります。</span></aside><p><a id="field_tools"></a></p>
+
+<h3 data-text="フィールドツール" id="field-tools" tabindex="-1">フィールドツール</h3>
+
+<ul>
+<li><a href="https://developer.chrome.com/docs/crux?hl=ja">Chrome ユーザー エクスペリエンス レポート</a></li>
+<li><a href="https://pagespeed.web.dev/?hl=ja">PageSpeed Insights</a></li>
+<li><a href="https://support.google.com/webmasters/answer/9205520?hl=ja">Search Console（Core Web Vitals レポート）</a></li>
+<li><a href="https://github.com/GoogleChrome/web-vitals"><code dir="ltr" translate="no">web-vitals</code> JavaScript ライブラリ</a></li>
+</ul>
+
+<p><a id="lab_tools"></a></p>
+
+<h3 data-text="ラボツール" id="lab-tools" tabindex="-1">ラボツール</h3>
+
+<ul>
+<li><a href="https://developer.chrome.com/docs/devtools?hl=ja">Chrome DevTools</a></li>
+<li><a href="https://developer.chrome.com/docs/lighthouse/overview?hl=ja">灯台</a></li>
+<li><a href="https://pagespeed.web.dev/?hl=ja">PageSpeed Insights</a></li>
+<li><a href="https://webpagetest.org/">WebPageTest</a></li>
+</ul>
+
+<p><a id="measure_layout_shifts_in_javascript"></a></p>
+
+<h3 data-text="JavaScript でレイアウトの移動を測定する" id="measure-layout-shifts-in-javascript" tabindex="-1">JavaScript でレイアウトの移動を測定する</h3>
+
+<p>JavaScript でレイアウト移動を測定するには、<a href="https://github.com/WICG/layout-instability">Layout Instability API</a> を使用します。</p>
+
+<p>次の例は、<code dir="ltr" translate="no">layout-shift</code> エントリをコンソールにログに記録する <a href="https://developer.mozilla.org/docs/Web/API/PerformanceObserver"><code dir="ltr" translate="no">PerformanceObserver</code></a> を作成する方法を示しています。</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">PerformanceObserver</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">entryList</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">for</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">entry</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">of</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">entryList</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getEntries</span><span class="devsite-syntax-p">())</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Layout shift:'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">entry</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}).</span><span class="devsite-syntax-nx">observe</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'layout-shift'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">buffered</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<p><a id="measure_cls_in_javascript"></a></p>
+
+<h3 data-text="JavaScript で CLS を測定する" id="measure-cls-in-javascript" tabindex="-1">JavaScript で CLS を測定する</h3>
+
+<p>JavaScript で CLS を測定するには、これらの予期しない <code dir="ltr" translate="no">layout-shift</code> エントリをセッションにグループ化し、セッションの最大値を計算する必要があります。CLS の計算方法に関するリファレンス実装が含まれている <a href="https://github.com/GoogleChrome/web-vitals/blob/main/src/onCLS.ts"><code dir="ltr" translate="no">web vitals</code> JavaScript ライブラリのソースコード</a>をご覧ください。</p>
+
+<p>ほとんどの場合、ページがアンロードされた時点での現在の CLS 値がそのページの最終的な CLS 値になりますが、次のセクションで説明するように、いくつかの重要な例外があります。<code dir="ltr" translate="no">web vitals</code> JavaScript ライブラリは、Web API の制限内で、これらの要因を可能な限り考慮しています。</p>
+
+<p><a id="differences_metric_api"></a></p>
+
+<h4 data-text="指標と API の違い" id="differences-metric-api" tabindex="-1">指標と API の違い</h4>
+
+<ul>
+<li>ページがバックグラウンドで読み込まれた場合、またはブラウザがコンテンツをペイントする前にバックグラウンドに移行された場合は、CLS 値を報告しないでください。</li>
+<li>ページが<a href="https://web.dev/articles/bfcache?hl=ja#impact_on_core_web_vitals">バックフォワード キャッシュ</a>から復元された場合、ユーザーは別のページ訪問として認識するため、CLS 値はゼロにリセットする必要があります。</li>
+<li>API は、iframe 内で発生したシフトの <code dir="ltr" translate="no">layout-shift</code> エントリを報告しませんが、ページのユーザー エクスペリエンスの一部であるため、指標では報告されます。これは、<a href="https://web.dev/articles/crux-and-rum-differences?hl=ja#iframes">CrUX と RUM の差異として表示される</a>ことがあります。CLS を正しく測定するには、これらの点を考慮する必要があります。サブフレームは、API を使用して <code dir="ltr" translate="no">layout-shift</code> エントリを親フレームに報告し、<a href="https://github.com/WICG/layout-instability#cumulative-scores">集計</a>できます。</li>
+</ul>
+
+<p>これらの例外に加えて、CLS はページのライフスパン全体を測定するため、複雑さが増します。</p>
+
+<ul>
+<li>ユーザーは、タブを<em>非常に</em>長い間（数日、数週間、数か月）開いたままにしている場合があります。ユーザーがタブを閉じない可能性もあります。</li>
+<li>モバイル オペレーティング システムでは、通常、ブラウザはバックグラウンド タブのページの読み込み解除コールバックを実行しないため、「最終的な」値を報告することが困難です。</li>
+</ul>
+
+<p>このようなケースに対応するには、ページがバックグラウンドにあるときはいつでも、またページがアンロードされたときも CLS を報告する必要があります（<a href="https://developer.chrome.com/blog/page-lifecycle-api?hl=ja#event-visibilitychange"><code dir="ltr" translate="no">visibilitychange</code> イベント</a>は、これらの両方のシナリオに対応しています）。このデータを受信する分析システムは、バックエンドで最終的な CLS 値を計算する必要があります。</p>
+
+<p>デベロッパーは、これらのケースをすべて覚えて対応するのではなく、<a href="https://github.com/GoogleChrome/web-vitals"><code dir="ltr" translate="no">web-vitals</code> JavaScript ライブラリ</a>を使用して CLS を測定できます。このライブラリは、iframe ケースを除き、前述のすべてのケースに対応しています。</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">onCLS</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'web-vitals'</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-c1">// Measure and log CLS in all situations</span>
+<span class="devsite-syntax-c1">// where it needs to be reported.</span>
+<span class="devsite-syntax-nx">onCLS</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code><aside class="note"><strong>注:</strong><span> クロスオリジン iframe など、JavaScript で CLS を測定できない場合があります。詳細については、<code dir="ltr" translate="no">web-vitals</code> ライブラリの<a href="https://github.com/GoogleChrome/web-vitals#limitations">制限事項</a>のセクションをご覧ください。</span></aside><p><a id="improve_cls"></a></p>
+
+<h2 data-text="CLS を改善する方法" id="improve-cls" tabindex="-1">CLS を改善する方法</h2>
+
+<p>現場でレイアウト シフトを特定し、ラボデータを使用してレイアウト シフトを最適化する方法については、<a href="https://web.dev/articles/optimize-cls?hl=ja">CLS の最適化</a>に関するガイドをご覧ください。</p>
+
+<h2 data-text="参考情報" id="additional_resources" tabindex="-1">参考情報</h2>
+
+<ul>
+<li><a href="https://developers.google.com/doubleclick-gpt/guides/minimize-layout-shift?hl=ja">レイアウト シフトを最小限に抑える</a>ための Google パブリッシャー タグのガイダンス</li>
+<li><a href="https://anniesullie.com/">Annie Sullivan</a> と <a href="https://kobes.ca/">Steve Kobes</a> による <a href="https://youtu.be/zIJuY-JCjqw">累積レイアウト シフトの理解</a>（<a href="https://perfmattersconf.com/">#PerfMatters</a>、2020 年）</li>
+</ul>
+
+<h2 data-text="変更履歴" id="changelog" tabindex="-1">変更履歴</h2>
+
+<p>指標の測定に使用される API や、指標自体の定義でバグが見つかることがあります。その結果、変更が必要になることがあります。これらの変更は、内部レポートやダッシュボードで改善または回帰として表示される場合があります。</p>
+
+<p>これらの指標の実装または定義に対するすべての変更は、この<a href="https://chromium.googlesource.com/chromium/src/+/main/docs/speed/metrics_changelog/cls.md">変更ログ</a>に表示されます。</p>
+
+<p>これらの指標に関するフィードバックがある場合は、<a href="https://groups.google.com/g/web-vitals-feedback?hl=ja">web-vitals-feedback Google グループ</a>で送信してください。</p>
+
+  
+
+  
+
+  
+</div>
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>特に記載のない限り、このページのコンテンツは<a href="https://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズの表示 4.0 ライセンス</a>により使用許諾されます。コードサンプルは <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 ライセンス</a>により使用許諾されます。詳しくは、<a href="https://developers.google.com/site-policies?hl=ja">Google Developers サイトのポリシー</a>をご覧ください。Java は Oracle および関連会社の登録商標です。</p>
+  <p>最終更新日 2023-04-12 UTC。</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+  
+    <template class="devsite-content-data-template">
+      [[["わかりやすい","easyToUnderstand","thumb-up"],["問題の解決に役立った","solvedMyProblem","thumb-up"],["その他","otherUp","thumb-up"]],[["必要な情報がない","missingTheInformationINeed","thumb-down"],["複雑すぎる / 手順が多すぎる","tooComplicatedTooManySteps","thumb-down"],["最新ではない","outOfDate","thumb-down"],["翻訳に関する問題","translationIssue","thumb-down"],["サンプル / コードに問題がある","samplesCodeIssue","thumb-down"],["その他","otherDown","thumb-down"]],["最終更新日 2023-04-12 UTC。"],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="フッターのリンク"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox wd-footer-promo">
+    <h3 class="devsite-footer-linkbox-heading no-link">web.dev</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <h3 class="devsite-footer-linkbox-heading no-link">
+          
+            web.dev
+          
+          </h3>
+          
+          
+          <div class="devsite-footer-linkbox-description">Google では、すべてのユーザーにとって、美しく、アクセスしやすく、高速で、安全なウェブサイトを構築できるよう、クロスブラウザ対応のウェブサイトを作成したいと考えています。このサイトには、Chrome チームのメンバーや外部の専門家が作成した、移行を支援するコンテンツが揃っています。</div>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">投稿</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400680&amp;template=1857359"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            バグを報告
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400680&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            未解決の問題を見る
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">関連コンテンツ</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            デベロッパー向け Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chromium のアップデート
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            事例紹介
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            ポッドキャストと番組
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">フォロー</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            X での @ChromiumDev
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            LinkedIn の Chrome for Developers
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/static/blog/feed.xml"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            RSS
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="ユーティリティのリンク">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms?hl=ja"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          利用規約
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy?hl=ja"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          プライバシー
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-MZWCJPP&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;True&#34;, &#34;requested&#34;: &#34;ja&#34;, &#34;served&#34;: &#34;ja&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Articles&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;web&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="jnplA6iexvbm64z8DuyGgp1a119J+e">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/js/app_loader.js', '[27,"ja",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a","https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web","https://web-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/web/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/vab7d3990237361b4739a5005ec80b0af3ee973650a028ed684c6b12bd1dc988a/web/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","web.dev","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["MiscFeatureFlags__gdp_dashboard_reskin_enabled","Profiles__enable_page_saving","OnSwitch__enable","TpcFeatures__proxy_prod_host","DevPro__enable_google_one_card","DevPro__enable_enterprise","Cloud__enable_cloud_dlp_service","Concierge__enable_pushui","TpcFeatures__enable_unmirrored_page_left_nav","DevPro__enable_vertex_credit_card","DevPro__enable_devsite_captcha","Profiles__enable_developer_profile_benefits_ui_redesign","Profiles__enable_targeted_hero","Profiles__enable_completequiz_endpoint","Concierge__enable_actions_menu","DevPro__enable_cloud_innovators_plus","MiscFeatureFlags__remove_cross_domain_tracking_params","Cloud__enable_legacy_calculator_redirect","MiscFeatureFlags__enable_view_transitions","MiscFeatureFlags__enable_explicit_template_dependencies","CloudShell__cloud_shell_button","MiscFeatureFlags__enable_variable_operator_index_yaml","Search__enable_dynamic_content_confidential_banner","BookNav__enable_tenant_cache_key","MiscFeatureFlags__enable_variable_operator","Profiles__enable_release_notes_notifications","Cloud__enable_cloud_shell","Profiles__enable_join_program_group_endpoint","Profiles__enable_profile_collections","Experiments__reqs_query_experiments","Profiles__enable_callout_notifications","MiscFeatureFlags__enable_explain_this_code","Analytics__enable_clearcut_logging","Search__enable_page_map","Search__enable_ai_search_summaries_for_all","Profiles__enable_complete_playlist_endpoint","MiscFeatureFlags__enable_llms_txt","Cloud__fast_free_trial","Search__enable_ai_eligibility_checks","MiscFeatureFlags__developers_footer_image","DevPro__enable_credits_banner","DevPro__enable_embed_profile_creation","Cloud__enable_llm_concierge_chat","Profiles__enable_auto_apply_credits","DevPro__enable_google_payments_buyflow","Profiles__enable_playlist_community_acl","DevPro__enable_code_assist","DevPro__enable_developer_subscriptions","Profiles__enable_public_developer_profiles","DevPro__enable_firebase_workspaces_card","MiscFeatureFlags__enable_appearance_cookies","Profiles__enable_developer_profile_pages_as_content","Profiles__enable_stripe_subscription_management","Profiles__enable_recognition_badges","DevPro__enable_google_payments","DevPro__enable_free_benefits","MiscFeatureFlags__enable_framebox_badge_methods","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_user_type","DevPro__enable_g1_integration","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_dashboard_curated_recommendations","Analytics__enable_devpro_interaction_logging","DevPro__enable_nvidia_credits_card","MiscFeatureFlags__enable_project_variables","CloudShell__cloud_code_overflow_menu","Profiles__enable_developer_profiles_callout","Concierge__enable_devsite_llm_tools","MiscFeatureFlags__developers_footer_dark_image","Profiles__enable_awarding_url","Cloud__cache_serialized_dynamic_content","Concierge__enable_remove_info_panel_tags","Cloud__enable_free_trial_server_call","Search__enable_suggestions_from_borg","SignIn__enable_l1_signup_flow","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_purchase_prompts","DevPro__remove_eu_tax_intake_form","Cloud__enable_cloudx_experiment_ids","Profiles__enable_completecodelab_endpoint","DevPro__enable_devpro_offers","Profiles__require_profile_eligibility_for_signin","MiscFeatureFlags__fix_lower_breadcrumbs"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4,null,"https://developerprofiles-pa.googleapis.com",[27,"web","web.dev","web.dev",null,"web-dot-devsite-v2-prod-3p.appspot.com",null,null,[null,null,null,null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],null,null,null,null,[1,null,1],[1,1,null,1,1],null,null,null,null,null,[1]],null,[38,null,null,null,null,null,"/images/lockup.svg","/images/touchicon-180.png",null,null,null,1,1,null,null,null,null,null,null,null,null,2,null,null,null,"/images/lockup-dark-theme.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[[],[1,1]],[[null,null,null,null,null,["GTM-MZWCJPP"],null,null,null,null,null,[["GTM-MZWCJPP",1]],1]],null,4],null,null,1,1,"https://developerscontentinsights-pa.googleapis.com","AIzaSyC11xEGtFhkmSh_iF6l_itbxnFz2GrIBOg","AIzaSyAXJ10nRF73mmdSDINgkCNX5bbd2KPcWm8","https://developers.googleapis.com",null,null,"AIzaSyCjP0KOnHfv8mwe38sfzZJMOnqE3HvrD4A",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
