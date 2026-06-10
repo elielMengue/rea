@@ -3,3 +3,4 @@ coverage/
 fixtures/
 pnpm-lock.yaml
 docs/*.svg
+docs/
