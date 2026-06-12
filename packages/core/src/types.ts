@@ -3,7 +3,10 @@ export interface Block {
   element?: Element;
 }
 
+export type AnchorRole = 'above' | 'center' | 'below';
+
 export interface TextAnchor {
+  role: AnchorRole;
   exactText: string;
   prefix: string;
   suffix: string;
