@@ -50,3 +50,7 @@ export function normalizeUrl(input: string): string {
 export function urlHash(input: string): string {
   return hashKey(normalizeUrl(input));
 }
+
+export function hostOf(input: string): string {
+  return new URL(input).hostname.toLowerCase();
+}
