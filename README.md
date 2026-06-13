@@ -72,14 +72,14 @@ pnpm fixtures                              # refresh fixture snapshots
 | Epic                       | Scope                                                | Status  |
 | -------------------------- | ---------------------------------------------------- | ------- |
 | 0 — Foundations            | Monorepo, extension skeleton, CI, fixtures           | ✅ Done |
-| 1 — Anchoring engine       | Text anchors, restore cascade, mutation test harness | 🔜 Next |
-| 2 — Position persistence   | Capture/restore wired into the extension, popup v1   | Planned |
+| 1 — Anchoring engine       | Text anchors, restore cascade, mutation test harness | ✅ Done |
+| 2 — Position persistence   | Capture/restore wired into the extension, popup v1   | 🔜 Next |
 | 3 — Rules engine & cleanup | Remote JSON rules, pre-paint CSS, restore badge      | Planned |
 | 4 — Reader overlay         | Shadow DOM reader view with anchor continuity        | Planned |
 | 5 — Aggressive mode        | MutationObserver heuristics, feedback loop           | Planned |
 | 6 — Publication            | Chrome Web Store, options page, release pipeline     | Planned |
 
-**Milestone M1 gate** (end of Epic 1): if exact+fuzzy restoration is below 95% on the fixture corpus, the anchoring design is revisited before any further investment.
+**Milestone M1 gate** (end of Epic 1): exact+fuzzy restoration must reach 95% on the fixture corpus or the anchoring design is revisited before any further investment. Current result: **100% (114/114)** across 6 mutation scenarios on 19 fixtures.
 
 ## Engineering practices
 
