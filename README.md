@@ -69,17 +69,19 @@ pnpm fixtures                              # refresh fixture snapshots
 
 ## Roadmap
 
-| Epic                       | Scope                                                | Status        |
-| -------------------------- | ---------------------------------------------------- | ------------- |
-| 0 — Foundations            | Monorepo, extension skeleton, CI, fixtures           | ✅ Done       |
-| 1 — Anchoring engine       | Text anchors, restore cascade, mutation test harness | ✅ Done       |
-| 2 — Position persistence   | Capture/restore wired into the extension, popup v1   | 🔬 Dogfooding |
-| 3 — Rules engine & cleanup | Remote JSON rules, pre-paint CSS, restore badge      | 🔜 Next       |
-| 4 — Reader overlay         | Shadow DOM reader view with anchor continuity        | Planned       |
-| 5 — Aggressive mode        | MutationObserver heuristics, feedback loop           | Planned       |
-| 6 — Publication            | Chrome Web Store, options page, release pipeline     | Planned       |
+| Epic                       | Scope                                                | Status  |
+| -------------------------- | ---------------------------------------------------- | ------- |
+| 0 — Foundations            | Monorepo, extension skeleton, CI, fixtures           | ✅ Done |
+| 1 — Anchoring engine       | Text anchors, restore cascade, mutation test harness | ✅ Done |
+| 2 — Position persistence   | Capture/restore wired into the extension, popup v1   | ✅ Done |
+| 3 — Rules engine & cleanup | Remote JSON rules, pre-paint CSS, restore badge      | 🔜 Next |
+| 4 — Reader overlay         | Shadow DOM reader view with anchor continuity        | Planned |
+| 5 — Aggressive mode        | MutationObserver heuristics, feedback loop           | Planned |
+| 6 — Publication            | Chrome Web Store, options page, release pipeline     | Planned |
 
 **Milestone M1 gate** (end of Epic 1): exact+fuzzy restoration must reach 95% on the fixture corpus or the anchoring design is revisited before any further investment. Current result: **100% (114/114)** across 6 mutation scenarios on 19 fixtures.
+
+**Milestone M2** (end of Epic 2): the position-persistence feature is dogfoodable daily. Acceptance is manual — see the [dogfooding guide](docs/dogfooding.md).
 
 ## Engineering practices
 
