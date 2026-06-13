@@ -23,6 +23,8 @@ export interface PositionRecord {
   contentFingerprint: string[];
   capturedAt: number;
   pinned?: boolean;
+  url?: string;
+  title?: string;
 }
 
 export type MatchConfidence = 'exact' | 'fuzzy' | 'ordinal' | 'percent' | 'abort';

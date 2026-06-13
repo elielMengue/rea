@@ -65,6 +65,8 @@ export class CaptureController {
     const record = capturePosition(blocks, centerIndex, {
       scrollPercent: currentScrollPercent(),
       urlHash: this.urlHash,
+      url: location.href,
+      title: document.title,
     });
     await savePosition(record);
   }

@@ -41,7 +41,13 @@ export function captureAnchors(
 export function capturePosition(
   blocks: Block[],
   centerIndex: number,
-  options: { intraBlockOffset?: number; scrollPercent?: number; urlHash?: string } = {},
+  options: {
+    intraBlockOffset?: number;
+    scrollPercent?: number;
+    urlHash?: string;
+    url?: string;
+    title?: string;
+  } = {},
 ): PositionRecord {
   return {
     version: 1,
@@ -51,5 +57,7 @@ export function capturePosition(
     blockCount: blocks.length,
     contentFingerprint: contentFingerprint(blocks),
     capturedAt: Date.now(),
+    ...(options.url !== undefined && { url: options.url }),
+    ...(options.title !== undefined && { title: options.title }),
   };
 }
