@@ -31,7 +31,9 @@ export class CaptureController {
     this.timer = setInterval(() => this.flush(), CAPTURE_THROTTLE_MS);
   }
 
-  stop(): void {
+  /** Persist the current position then tear down — used before SPA re-keying. */
+  async stop(): Promise<void> {
+    await this.captureNow();
     this.stopped = true;
     window.removeEventListener('scroll', this.onScroll);
     document.removeEventListener('visibilitychange', this.onVisibilityChange);
