@@ -6,6 +6,7 @@ import {
 } from '@reader-mode/core';
 import { savePosition } from '../storage';
 import { collectLiveBlocks, currentScrollPercent, readingLineIndex } from './dom';
+import { isProgrammaticScroll } from './scroll-guard';
 
 /**
  * Watches a substantial page and persists the reading position once the user
@@ -38,6 +39,7 @@ export class CaptureController {
   }
 
   private readonly onScroll = (): void => {
+    if (isProgrammaticScroll()) return;
     this.engagement.hasScrolled = true;
     this.dirty = true;
   };

@@ -1,7 +1,8 @@
 import { hasSubstantialContent, isEnabledForUrl, urlHash } from '@reader-mode/core';
-import { loadSettings } from '../storage';
+import { loadPosition, loadSettings } from '../storage';
 import { CaptureController } from './capture';
 import { collectLiveBlocks } from './dom';
+import { restoreWithStabilization } from './restore';
 
 async function init(): Promise<void> {
   if (chrome.extension?.inIncognitoContext) return;
@@ -12,7 +13,12 @@ async function init(): Promise<void> {
 
   if (!hasSubstantialContent(collectLiveBlocks())) return;
 
-  const controller = new CaptureController(urlHash(url));
+  const hash = urlHash(url);
+
+  const saved = await loadPosition(hash);
+  if (saved) restoreWithStabilization(saved);
+
+  const controller = new CaptureController(hash);
   controller.start();
 }
 

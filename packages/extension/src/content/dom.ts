@@ -1,4 +1,5 @@
 import { collectBlocks, type Block } from '@reader-mode/core';
+import { markProgrammaticScroll } from './scroll-guard';
 
 /** D13: anchor and restore against the block crossing 40% of the viewport. */
 export const READING_LINE = 0.4;
@@ -25,6 +26,7 @@ export function readingLineIndex(blocks: LiveBlock[]): number {
 export function scrollBlockToReadingLine(element: Element): void {
   const rect = element.getBoundingClientRect();
   const top = window.scrollY + rect.top - window.innerHeight * READING_LINE;
+  markProgrammaticScroll();
   window.scrollTo({ top: Math.max(0, top), behavior: 'instant' as ScrollBehavior });
 }
 
@@ -35,6 +37,7 @@ export function currentScrollPercent(): number {
 
 export function scrollToPercent(percent: number): void {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  markProgrammaticScroll();
   window.scrollTo({
     top: Math.max(0, scrollable * percent),
     behavior: 'instant' as ScrollBehavior,
