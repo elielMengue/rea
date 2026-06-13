@@ -1,3 +1,19 @@
-import { normalizeText } from '@reader-mode/core';
+import { hasSubstantialContent, isEnabledForUrl, urlHash } from '@reader-mode/core';
+import { loadSettings } from '../storage';
+import { CaptureController } from './capture';
+import { collectLiveBlocks } from './dom';
 
-console.log('[reader-mode] content script loaded on', normalizeText(document.title));
+async function init(): Promise<void> {
+  if (chrome.extension?.inIncognitoContext) return;
+
+  const url = location.href;
+  const settings = await loadSettings();
+  if (!isEnabledForUrl(settings, url)) return;
+
+  if (!hasSubstantialContent(collectLiveBlocks())) return;
+
+  const controller = new CaptureController(urlHash(url));
+  controller.start();
+}
+
+void init();
